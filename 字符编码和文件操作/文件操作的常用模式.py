@@ -23,7 +23,21 @@ with open('test.txt',mode='rt',encoding='utf-8')as f:#上下文操作，在with 
     # print(f.readlines())
 with open('test2.txt',mode='wt',encoding='utf-8')as f2:
 
-
-    print(f2.writable())
-    f2.write('写入操作\n')
+    pass
+    # print(f2.writable())
+    # f2.write('写入操作\n')
     #无则创建，有则清空
+
+with open('test2.txt',mode='at',encoding='utf-8')as f2:
+    pass
+    #只追加写模式无则新建，有则从尾开始，可写不能读
+    # f2.write('用这个则不会清空')
+
+#w,a模式的区别，一个是覆盖，一个不会覆盖
+
+#二进制模式
+with open('panda.jpg',mode='rb')as img:
+    pass
+#可对字符进行编码解码
+    # .decode('utf-8')二进制解码成字符
+    # .encode('utf-8')字符编码成二进制
